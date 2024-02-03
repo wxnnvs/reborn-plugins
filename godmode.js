@@ -1,5 +1,5 @@
 /*
-NOTE: This will only work in singleplayer, wich does not exist anymore
+NOTE: This will only work in singleplayer
 */
 PluginAPI.require("player");
 
