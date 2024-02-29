@@ -11,6 +11,7 @@ window.addEventListener("keydown", (event) => {
             ModAPI.blocks.air.lightValue = oldBrightness;
         }
         ModAPI.blocks.reload();
+        ModAPI.update();
         ModAPI.displayToChat({msg: "Fullbright toggled " + isToggled})
     }
 });
