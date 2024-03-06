@@ -1,3 +1,5 @@
+// use on your own risk
+
 onbeforeunload = function () {
     localStorage.x = 1
 };

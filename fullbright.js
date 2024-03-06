@@ -1,4 +1,8 @@
-var isToggled = false; //stores whether the plugin is on or off
+/*
+    Broken asf, idk why
+*/
+
+var isToggled = false;                            //stores whether the plugin is on or off
 var oldBrightness = ModAPI.blocks.air.lightValue //stores the original lightvalue
 
 
@@ -10,8 +14,7 @@ window.addEventListener("keydown", (event) => {
         } else {
             ModAPI.blocks.air.lightValue = oldBrightness;
         }
-        ModAPI.blocks.reload();
-        ModAPI.update();
+        ModAPI.blocks.air.reload();
         ModAPI.displayToChat({msg: "Fullbright toggled " + isToggled})
     }
 });
