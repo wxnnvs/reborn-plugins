@@ -1,5 +1,5 @@
 /*
-    fixed?
+    broken because of server sync
 */
 ModAPI.require("player");
 
@@ -9,10 +9,9 @@ ModAPI.addEventListener("key", (e) => {
         let X = prompt("Teleporter v1\nInput an X-coordinate");
         let Y = prompt("Teleporter v1\nInput a Y-coordinate");
         let Z = prompt("Teleporter v1\nInput a Z-coordinate");
-        ModAPI.player.setPosition({
-            x: X,
-            y: Y,
-            z: Z
-        });
+        ModAPI.player.x = X;
+        ModAPI.player.y = Y;
+        ModAPI.player.z = Z;
+        ModAPI.player.reload();
     }
 });
