@@ -1,17 +1,20 @@
 /*
-    broken because of server sync
+    might work on 1.2.5
 */
 ModAPI.require("player");
+ModAPI.require("network");
 
-// handle message and teleport player
-ModAPI.addEventListener("key", (e) => {
-    if (e.key == 49) {
-        let X = prompt("Teleporter v1\nInput an X-coordinate");
-        let Y = prompt("Teleporter v1\nInput a Y-coordinate");
-        let Z = prompt("Teleporter v1\nInput a Z-coordinate");
-        ModAPI.player.x = X;
-        ModAPI.player.y = Y;
-        ModAPI.player.z = Z;
+ModAPI.addEventListener("sendchatmessage", (e) => {
+    if (e.message == ".setPos") {
+        let X = e.message.split(" ")[1];
+        let Y = e.message.split(" ")[2];
+        let Z = e.message.split(" ")[3];
+        ModAPI.network.sendPacketPlayerPosition({
+            posX: X,
+            posY: Y,
+            posZ: Z,
+            isOnGround: true
+        });
         ModAPI.player.reload();
     }
 });
