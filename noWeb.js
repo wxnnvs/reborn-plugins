@@ -4,22 +4,20 @@
 
 ModAPI.require("player");
 
-var isToggled = false; // stores whether the plugin is on or off
+var isToggled = false;
+const defaultSpeed = ModAPI.player.capabilities.getWalkSpeed();
 
-function updatePlayerWeb() {
-    ModAPI.player.setInWeb(isToggled);
-    ModAPI.player.reload();
-}
+ModAPI.addEventListener("update", () => {
+    if (isToggled && ModAPI.player.isInWeb) {
+        ModAPI.player.capabilities.setWalkSpeed(defaultSpeed);
+        ModAPI.player.isInWeb = false;
+        ModAPI.player.reload();
+    }
+});
 
-// add the update event listener
-window.addEventListener("update", updatePlayerWeb);
-
-// add the keydown event listener
-window.addEventListener("keydown", (event) => {
-    if (event.key.toLowerCase() === "h") {
-        window.removeEventListener("update", updatePlayerWeb);
+window.addEventListener("keydown", (e) => {
+    if (e.key === "x") {
         isToggled = !isToggled;
-        window.addEventListener("update", updatePlayerWeb);
-        ModAPI.displayToChat({msg: "NoWeb toggled " + isToggled})
+        ModAPI.displayToChat({msg: "Web effect is now " + (isToggled ? "enabled" : "disabled")})
     }
 });
