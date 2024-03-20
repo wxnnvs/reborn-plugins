@@ -5,9 +5,9 @@ let lolMessageInterval;
 function sendLolMessages() {
     lolMessageInterval = setInterval(() => {
         if (startCommandReceived) {
-            ModAPI.sendPacketChatMessage({ message: "lol", preventDefault: false });
+            ModAPI.network.sendPacketChatMessage({messageIn: "lol"});
         }
-    }, 1000); // Adjust the interval as needed (e.g., every second)
+    }, 500); // Adjust the interval as needed (e.g., every second)
 }
 
 // Function to stop sending "lol" messages
@@ -16,8 +16,8 @@ function stopSendingLolMessages() {
 }
 
 // Event listener for receiving chat messages
-ModAPI.addEventListener("packetchat", (data) => {
-    if (data.chat === ".start") {
+ModAPI.addEventListener("sendchatmessage", (data) => {
+    if (data.message === ".start") {
         startCommandReceived = true;
         console.log("Received start command. Sending 'lol' messages.");
         sendLolMessages();
