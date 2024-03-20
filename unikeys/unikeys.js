@@ -40,7 +40,7 @@ unikbui.div.style.backgroundSize = "64px";
 unikbui.openbutton.setAttribute("onclick", "unikbui.div.innerHTML = unikbui.html;unikbui.div.style.display = 'initial';UKrenderui();ukui = true");
 unikbui.openbutton.setAttribute("class", "mcButton");
 unikbui.style = document.createElement("style");
-unikbui.style.innerHTML = "@font-face{font-family:Minecraftia;src:url(minecraftia.ttf)}.mcButton{background:url(mcButton.png) 0 0/cover no-repeat;color:inherit;border:none;padding:0;font:inherit;outline:inherit;min-width:300px;min-height:37px;cursor:default}.mcButton:hover{background-image:url(mcButtonHover.png)}.mcKeybindButton{min-width:150px;min-height:40px}.mcResetButton{min-width:100px;min-height:40px}";
+unikbui.style.innerHTML = "@font-face{font-family:Minecraftia;src:url(https://raw.githubusercontent.com/wxnnvs/reborn-plugins/main/unikeys/minecraftia.ttf)}.mcButton{background:url(https://raw.githubusercontent.com/wxnnvs/reborn-plugins/main/unikeys/mcButton.png) 0 0/cover no-repeat;color:inherit;border:none;padding:0;font:inherit;outline:inherit;min-width:300px;min-height:37px;cursor:default}.mcButton:hover{background-image:url(https://raw.githubusercontent.com/wxnnvs/reborn-plugins/main/unikeys/mcButtonHover.png)}.mcKeybindButton{min-width:150px;min-height:40px}.mcResetButton{min-width:100px;min-height:40px}";
 document.head.appendChild(unikbui.style);
 ModAPI.addEventListener("gui", function () {
     sleep(1e3).then(() => {
