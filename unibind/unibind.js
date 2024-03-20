@@ -33,7 +33,7 @@ unikbui.div.style.top = "0px";
 unikbui.div.style.left = "0px";
 unikbui.div.style.bottom = "0px";
 unikbui.div.style.right = "0px";
-unikbui.div.style.backgroundImage = "url(data:image/png;base64,UklGRhoBAABXRUJQVlA4TA0BAAAvn8AnAIWjtpEECdnA2N0DsTROy7xUqfrWw0jbyLkJKTz0+I20jTT/Bo89e1YR/Wfktm0Y+wNKLobT7QP/n/B7Z/naW26QHoTpHB7LFouyKHlzeHxfCStSuj9KdbC8z1IJ5iWiyQed48vtYJ+lUu0t4VwranS1XMIutSiLYlbb8G54uf2p3VPSfRZtSrlsPFjOzZZrd/us3B3uK+HcHJQql+xbLMrS/WqNpm6DeZ/VIPVYaN/KzUbp91nd9xl5pYu50dU2W417nbdTj5l2Ne92uM9qXNpyf6+oXkabHKXaZ1HS4Iaqpim+1KIJ+0M49/LjNbTGP5mrrMZEuc7Uzcb1ViOJ6TuOt4NGJs+zDgA=)";
+unikbui.div.style.backgroundImage = "url(https://raw.githubusercontent.com/wxnnvs/reborn-plugins/main/unibind/background.png)";
 unikbui.div.style.backgroundColor = "#3c3c3c";
 unikbui.div.style.backgroundBlendMode = "multiply";
 unikbui.div.style.backgroundSize = "64px";
@@ -104,3 +104,4 @@ ModAPI.addEventListener("key", function (event) {
         }
     }
 });
+
