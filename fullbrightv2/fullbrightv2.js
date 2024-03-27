@@ -6,13 +6,13 @@ var toggled = false;
 ModAPI.addEventListener("key", function (ev) {
     if (ev.key == 33) {
         if (!toggled) {
-            var win = open("url");
+            var win = open();
+            win.close();
             toggled = true;
 
         } else {
-            ModAPI.displayToChat({
-                msg: "fullbright disabled! go to an other tab and come back to see the results"
-            });
+            var win = open();
+            win.close();
             toggled = false;
         }
     }
