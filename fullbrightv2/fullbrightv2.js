@@ -1,6 +1,8 @@
 // Original by radmanplays
 // Modified by wxnnvs
 
+ModAPI.require("settings");
+
 var gamma = 1000;
 var toggled = false;
 ModAPI.addEventListener("key", function (ev) {
