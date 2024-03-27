@@ -1,5 +1,5 @@
 // Original by radmanplays
-// Modified by wxnnvs
+// Fixed by wxnnvs
 
 ModAPI.require("settings");
 
