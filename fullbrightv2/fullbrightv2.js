@@ -1,33 +1,33 @@
 // Original by radmanplays
 // Fixed by wxnnvs
-
-ModAPI.require("settings");
+// Even more fixed by radmanplays
 
 var gamma = 1000;
-var toggled = false;
+
+var toggled = true;
+
+ModAPI.settings.gammaSetting = gamma;
+
+ModAPI.settings.reload();
+
 ModAPI.addEventListener("key", function (ev) {
     if (ev.key == 33) {
         if (!toggled) {
-            toggled = true;
-            var win = open();
-            win.close();
+            ModAPI.settings.gammaSetting = gamma;
 
+            ModAPI.settings.reload();
+
+            ModAPI.displayToChat({ msg: "fullbright enabled!" });
+
+            toggled = true;
         } else {
+            ModAPI.settings.gammaSetting = 1;
+
+            ModAPI.settings.reload();
+
+            ModAPI.displayToChat({ msg: "fullbright disabled!" });
+
             toggled = false;
-            var win = open();
-            win.close();
         }
     }
-
-})
-
-
-ModAPI.addEventListener("frame", function () {
-    if (toggled) {
-        ModAPI.settings.gammaSetting = gamma;
-        ModAPI.settings.reload();
-    } else {
-        ModAPI.settings.gammaSetting = 1;
-        ModAPI.settings.reload();
-    }
-})
+});
