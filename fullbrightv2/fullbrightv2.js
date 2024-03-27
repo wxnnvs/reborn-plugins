@@ -1,5 +1,5 @@
-// By radmanplays
-// Modified by: wxnnvs
+// Original by radmanplays
+// Modified by wxnnvs
 
 var gamma = 1000;
 var toggled = false;
